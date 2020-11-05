@@ -75,8 +75,12 @@ to <kbd>C-&lt;f5></kbd>. To disable this translation, you can use the
 `god-mode-enable-function-key-translation` variable, as follows:
 
 ``` emacs-lisp
-(setq god-mode-enable-function-key-translation nil)
+(setq god-mode-enable-function-key-translation nil) ;before loading god-mode
+(require 'god-mode)
 ```
+
+Note that for proper effect, setting `god-mode-enable-function-key-translation` to `nil`
+must be done before `god-mode` is loaded.
 
 Also, you can add this to your `.xmodmap` to rebind the caps lock key to the
 escape key:
